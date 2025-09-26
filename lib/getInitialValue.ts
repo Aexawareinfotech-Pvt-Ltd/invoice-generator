@@ -1,5 +1,7 @@
-"use client";
-export const getInitialValue = (variableName: string, defaultValue?: string): string => {
+export const getInitialValue = (
+  variableName: string,
+  defaultValue?: string
+): string => {
   try {
     return localStorage.getItem(variableName) || defaultValue || "";
   } catch (error) {
