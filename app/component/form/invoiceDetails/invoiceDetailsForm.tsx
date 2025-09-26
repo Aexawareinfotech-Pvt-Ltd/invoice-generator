@@ -141,7 +141,7 @@ export const InvoiceDetailsForm = () => {
                     onChange([...value, { itemDescription: "" }]);
                   }}
                   type="button"
-                  className="flex justify-center items-center text-orange-500 font-medium text-sm gap-2"
+                  className="flex justify-center items-center text-blue-600 font-medium text-sm gap-2"
                 >
                   <Plus className="w-4 h-4" />
                   <p>Add Item</p>

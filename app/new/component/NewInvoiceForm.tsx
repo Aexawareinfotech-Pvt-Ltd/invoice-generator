@@ -39,7 +39,7 @@ export const NewInvoiceForm = () => {
                 />
                 <div>
                   <p className="font-semibold">Invoice Generator</p>
-                  <p className="text-orange-500 text-sm">By Prolab</p>
+                  <p className="text-blue-600 text-sm">By Aexaware</p>
                 </div>
               </div>
               <UserInputForm />
