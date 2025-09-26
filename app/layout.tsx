@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     },
   },
   title:
-    "Free Invoice Generator: Create & Send Professional Invoices in Minutes",
+    "Aexaware Free Invoice Generator: Create & Send Professional Invoices in Minutes",
   description:
-    "Get paid on time with our free invoice maker. Create professional invoices & get them to clients instantly.",
+    "Get paid on time with Aexaware's free invoice maker. Create professional invoices & get them to clients instantly.",
   keywords: [
     "invoice generator",
     "free invoice template",
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_URL,
     type: "website",
     images: "/og-image.jpeg",
-    siteName: "Invoice Generator",
+    siteName: "Aexaware Invoice Generator",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@ThatsPranav",
-    creator: "@ThatsPranav",
+    site: "@AexawareInfotech",
+    creator: "@AexawareInfotech",
   },
 };
 

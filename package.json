@@ -1,5 +1,11 @@
 {
-  "name": "invoice",
+  "name": "aexaware-invoice-generator",
+  "description": "Professional invoice generator by Aexaware Infotech Pvt Ltd",
+  "author": "Aexaware Infotech Pvt Ltd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aexawareinfotech-Pvt-Ltd/invoice-generator.git"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -44,5 +50,6 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
-  }
+  },
+  "license": "MIT"
 }
