@@ -2,7 +2,10 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
 const NewInvoiceForm = dynamic(
-  () => import("@/app/new/component/NewInvoiceForm"),
+  () =>
+    import("@/app/new/component/NewInvoiceForm").then(
+      (mod) => mod.NewInvoiceForm
+    ),
   { ssr: false }
 );
 
