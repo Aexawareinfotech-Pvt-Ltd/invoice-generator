@@ -6,20 +6,44 @@ import { Input } from "@/app/component/ui/input";
 import { Plus, Trash2 } from "lucide-react";
 import CustomNumberInput from "@/app/component/ui/customNumberInput";
 import { useGetValue } from "@/app/hooks/useGetValue";
-import { Controller } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { getItemValue } from "@/lib/getInitialValue";
 
 export const InvoiceDetailsForm = () => {
+  const { setValue } = useFormContext();
   const value = useGetValue("currency", "INR");
   const currencyDetails = currencyList.find(
     (currency) => currency.value.toLowerCase() === value.toLowerCase()
   )?.details;
 
+  const handleClear = () => {
+    const fields = ["invoiceNo", "note", "discount", "tax"];
+    fields.forEach((field) => {
+      localStorage.removeItem(field);
+      setValue(field, "");
+    });
+    localStorage.removeItem("items");
+    setValue("items", [{ itemDescription: "" }]);
+    // Clear dates if present
+    setValue("issueDate", "");
+    setValue("dueDate", "");
+    localStorage.removeItem("issueDate");
+    localStorage.removeItem("dueDate");
+  };
+
   return (
     <Controller
       render={({ field: { onChange, value } }) => (
         <div className="pt-24">
-          <p className="text-2xl font-semibold pb-3">Invoice Details</p>
+          <div className="flex justify-between items-center mb-3">
+            <p className="text-2xl font-semibold">Invoice Details</p>
+            <button
+              onClick={handleClear}
+              className="text-sm text-gray-500 hover:text-gray-700"
+            >
+              Clear
+            </button>
+          </div>
           <div className="flex flex-col gap-6">
             <div>
               <p className="pt-3 font-medium text-neutral-500">
