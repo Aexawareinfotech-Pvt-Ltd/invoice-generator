@@ -101,7 +101,7 @@ export const NewInvoiceForm = () => {
       if (field === "items") {
         methods.setValue("items", [{ itemDescription: "" }]);
       } else {
-        methods.setValue(field, "");
+        methods.setValue(field as any, ""); // Cast to bypass strict typing for dynamic fields
       }
     });
 
