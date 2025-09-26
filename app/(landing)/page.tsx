@@ -26,7 +26,7 @@ const Home = () => {
       <div className="border-l border-r max-w-4xl w-full mx-auto border-dashed h-full flex justify-center flex-col border-gray-300">
         <div className="flex justify-center items-center mt-10">
           <Image
-            src="/logo 2.png"
+            src="/logo.png"
             width={200}
             height={100}
             className="rounded-lg"
